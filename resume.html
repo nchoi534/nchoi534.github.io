@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Resume | Nicholas M. Choi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.rl{display:grid;grid-template-columns:1fr 265px;gap:3rem;align-items:start}
+.rsb{position:sticky;top:calc(var(--nh)+1.5rem);display:flex;flex-direction:column;gap:1.1rem}
+.rd{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);background:var(--white)}
+.rh{background:var(--navy);padding:1.85rem 2.25rem}
+.rh h2{font-family:var(--serif);font-size:2rem;color:#fff;font-weight:700;margin-bottom:0.25rem}
+.rh .s{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.5}
+.rs{padding:1.4rem 2.25rem;border-bottom:1px solid var(--g-bdr)}
+.rs:last-child{border-bottom:none}
+.rst{font-family:var(--mono);font-size:0.61rem;letter-spacing:0.17em;text-transform:uppercase;color:var(--gold);margin-bottom:0.85rem;display:flex;align-items:center;gap:0.55rem}
+.rst::after{content:'';flex:1;height:1px;background:var(--g-bdr)}
+.re{margin-bottom:1.2rem}
+.re:last-child{margin-bottom:0}
+.rr{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.2rem;margin-bottom:0.15rem}
+.ro{font-weight:700;color:var(--navy);font-size:0.9rem}
+.rda{font-family:var(--mono);font-size:0.6rem;color:var(--tx3)}
+.rro{font-style:italic;font-size:0.79rem;color:var(--tx2);margin-bottom:0.5rem}
+.ru{list-style:none}
+.ru li{font-size:0.82rem;color:var(--tx2);line-height:1.65;padding-left:0.95rem;position:relative;margin-bottom:0.3rem}
+.ru li::before{content:'•';position:absolute;left:0;color:var(--gold)}
+.sg2{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.42rem;align-items:center}
+.sgl{font-size:0.74rem;font-weight:600;color:var(--navy);min-width:96px;flex-shrink:0}
+.sc2{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r);padding:1.3rem 1.4rem;box-shadow:var(--sh)}
+.sc2 h3{font-weight:700;color:var(--navy);font-size:0.9rem;margin-bottom:0.38rem}
+.sc2 p{font-size:0.8rem;color:var(--tx2);line-height:1.6;margin-bottom:0.9rem}
+.sc2 p:last-child{margin-bottom:0}
+@media(max-width:860px){.rl{grid-template-columns:1fr;gap:2.25rem}.rsb{position:static}.rh{padding:1.5rem}.rs{padding:1.25rem 1.5rem}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nb" href="index.html"><span class="nb-name">Nicholas M. Choi</span><span class="nb-sub">ECE @ Georgia Tech</span></a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="threads.html">Threads</a></li><li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li><li><a href="goals.html">Goals</a></li>
+    <li><a href="resume.html" class="on">Resume</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="ph">
+  <div class="ph-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Georgia_Institute_of_Technology_campus%2C_Tech_Tower.jpg/1280px-Georgia_Institute_of_Technology_campus%2C_Tech_Tower.jpg')"></div>
+  <div class="ph-ov"></div>
+  <div class="ph-ct"><div class="ey">Curriculum Vitae</div><h1>Resume</h1></div>
+</div>
+<div class="pb"><div class="wrap">
+  <div class="rl">
+    <div class="rd">
+      <div class="rh">
+        <h2>Nicholas M. Choi</h2>
+        <div class="s">Fulton, MD · choi.nicholas534@gmail.com · +1 (202) 381-8120 · US Citizen</div>
+        <div class="s">linkedin.com/in/nicholas-choi-gt2029</div>
+      </div>
+      <div class="rs"><div class="rst">Objective</div><p style="font-size:0.85rem;color:var(--tx2);line-height:1.75">Computer Engineering student at Georgia Institute of Technology with hands-on experience in hardware-software integration, digital system design, and embedded firmware development. Proven ability to design and verify digital logic in Verilog HDL, develop embedded C++ firmware, and contribute to full-stack software projects. Seeking a System Test Internship for Summer 2026.</p></div>
+      <div class="rs"><div class="rst">Education</div>
+        <div class="re"><div class="rr"><span class="ro">Georgia Institute of Technology</span><span class="rda">Aug 2025 — May 2028 (Expected)</span></div><div class="rro">Bachelor of Science in Computer Engineering · GPA 3.61 · Atlanta, GA</div><p style="font-size:0.79rem;color:var(--tx2)">Threads: Computing Hardware Emerging Architectures (CHEA) + Digital Signal and System Design (DSSD)</p></div>
+      </div>
+      <div class="rs"><div class="rst">Skills</div>
+        <div class="sg2"><span class="sgl">Programming</span><span class="pill">Verilog HDL</span><span class="pill">Java</span><span class="pill">Python</span><span class="pill">C++</span><span class="pill">JavaScript</span></div>
+        <div class="sg2"><span class="sgl">Hardware</span><span class="pill">ModelSim</span><span class="pill">Quartus Prime</span><span class="pill">DE10-Lite FPGA</span><span class="pill">Arduino</span></div>
+        <div class="sg2"><span class="sgl">Software</span><span class="pill">Git</span><span class="pill">Autodesk</span><span class="pill">OnShape</span><span class="pill">Altium Designer</span></div>
+        <div class="sg2"><span class="sgl">Languages</span><span class="pill">English (Fluent)</span><span class="pill">French (Intermediate)</span><span class="pill">Korean (Intermediate)</span></div>
+      </div>
+      <div class="rs"><div class="rst">Experience</div>
+        <div class="re"><div class="rr"><span class="ro">Georgia Tech RoboJackets</span><span class="rda">Aug 2025 — Present</span></div><div class="rro">Electrical and Firmware Engineer · RoboNav Electrical Team · Atlanta, GA</div><ul class="ru"><li>Designed and documented electrical systems for autonomous platforms, including power distribution and control interfaces.</li><li>Implemented C++ firmware on embedded microcontrollers for real-time motion control across all system components.</li><li>Conducted system-level testing and verification, catching issues before deployment.</li></ul></div>
+        <div class="re"><div class="rr"><span class="ro">Reservoir Robotics</span><span class="rda">Aug 2021 — May 2025</span></div><div class="rro">Vice President and Hardware Team Leader · Fulton, MD</div><ul class="ru"><li>Led schematic development and PCB layout of competitive robotics systems with mixed voltage power distribution.</li><li>Integrated electrical infrastructure with mechanical and software teams; mentored 8+ underclassmen in robotics and CAD.</li></ul></div>
+      </div>
+      <div class="rs"><div class="rst">Projects</div>
+        <div class="re"><div class="rr"><span class="ro">GT-8 Calculator — Individual FPGA Project</span><span class="rda">Spring 2026</span></div><div class="rro">Verilog HDL · ModelSim · Quartus Prime · Intel DE10-Lite FPGA</div><ul class="ru"><li>Designed an 8-bit ALU in Verilog supporting 6 operations with carry, overflow, and zero flags; built from gate level through a full ripple carry adder.</li><li>Authored a self-checking testbench validating edge cases including signed overflow and two's complement subtraction.</li></ul></div>
+        <div class="re"><div class="rr"><span class="ro">Bacter.ai — Clinical Decision Support Tool</span><span class="rda">Spring 2026</span></div><div class="rro">Team-based · Python · Flask · XGBoost · React · Vite · REST API</div><ul class="ru"><li>Co-developed a genomic platform predicting antibiotic resistance across 10 antibiotics in under 60 seconds from raw FASTA input.</li><li>Trained 10 XGBoost classifiers on 4,096-dimension k-mer vectors with 5-fold cross-validation; integrated SHAP explainability pipeline.</li><li>Developed the React and Vite frontend with interactive UI components consuming Flask REST API endpoints in real time.</li></ul></div>
+      </div>
+      <div class="rs"><div class="rst">Leadership</div>
+        <div class="re"><div class="rr"><span class="ro">Korean Undergraduate Student Association</span><span class="rda">Aug 2025 — Present</span></div><div class="rro">Freshman Representative</div><ul class="ru"><li>Planned and executed cultural events; supported officers and stepped in to lead discussions when needed.</li></ul></div>
+      </div>
+      <div class="rs"><div class="rst">Relevant Coursework</div><p style="font-size:0.83rem;color:var(--tx2)">Digital Systems Design (ECE 2020) · Intro to Object-Oriented Design (CS 1331) · ECE Freshman Seminar (ECE 1100) · Integral Calculus (MATH 1552)</p></div>
+    </div>
+
+    <div class="rsb">
+      <div class="sc2"><h3>Download Resume</h3><p>Full PDF formatted for the Georgia Tech ECE Career Fair, available upon request.</p><a href="contact.html" class="btn btn-p" style="width:100%;display:flex">Request PDF</a></div>
+      <div class="sc2"><h3>LinkedIn Profile</h3><p>Connect for the most up-to-date professional information and project updates.</p><a href="https://www.linkedin.com/in/nicholas-choi-gt2029/" target="_blank" class="btn btn-g" style="width:100%;display:flex">View on LinkedIn</a></div>
+      <div class="sc2"><h3>Seeking</h3><p style="font-weight:700;color:var(--navy);font-size:0.9rem;margin-bottom:0.35rem">System Test / HW Verification Internship</p><p>Summer 2026. Interested in hardware verification, embedded test, or digital systems roles in semiconductor or systems companies.</p></div>
+    </div>
+  </div>
+</div></div>
+<footer class="ft"><p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p><span>GT · Class of 2029</span></footer>
+<script>const t=document.getElementById('nt'),l=document.getElementById('nl');if(t)t.addEventListener('click',()=>l.classList.toggle('open'));</script>
+</body>
+</html>

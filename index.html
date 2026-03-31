@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Nicholas M. Choi | ECE @ Georgia Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+/* ── HERO ── */
+.hero {
+  margin-top: var(--nh);
+  min-height: calc(100vh - var(--nh));
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  overflow: hidden;
+}
+.hl {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 5rem 4rem 5rem 2.5rem;
+  background: var(--bg); position: relative; overflow: hidden;
+}
+.hl::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 52px,
+    rgba(179,163,105,0.04) 52px, rgba(179,163,105,0.04) 53px);
+}
+.hl > * { position: relative; z-index: 1; }
+.h-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.h-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); flex-shrink: 0; }
+.h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 4.2vw, 4rem);
+  font-weight: 700; line-height: 1.06; color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+.h1 em { font-style: italic; color: var(--gold); font-weight: 400; }
+.h-sub {
+  max-width: 480px; font-size: 0.97rem;
+  color: var(--tx2); line-height: 1.82; margin-bottom: 2.25rem;
+}
+.ctas { display: flex; gap: 0.85rem; flex-wrap: wrap; margin-bottom: 2.75rem; }
+.badges { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.badge {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.26rem 0.68rem; border-radius: 20px;
+  border: 1px solid var(--g-bdr); color: var(--tx2); background: var(--g-dim);
+}
+
+/* right photo panel */
+.hr {
+  position: relative; overflow: hidden; background: var(--navy);
+}
+.hr-photo {
+  position: absolute; inset: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Georgia_Institute_of_Technology_campus%2C_Tech_Tower.jpg/1280px-Georgia_Institute_of_Technology_campus%2C_Tech_Tower.jpg') center/cover;
+  filter: brightness(0.38) saturate(0.55);
+  transition: transform 10s ease;
+}
+.hr:hover .hr-photo { transform: scale(1.04); }
+.hr-ov {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,48,87,0.5) 0%, transparent 65%);
+}
+.hr-ct {
+  position: relative; z-index: 2; height: 100%;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2.5rem;
+}
+.monogram {
+  position: absolute; top: 2rem; left: 2rem;
+  width: 72px; height: 72px; border-radius: 50%;
+  border: 1.5px solid rgba(179,163,105,0.45);
+  background: rgba(0,48,87,0.45);
+  display: flex; align-items: center; justify-content: center;
+}
+.monogram span {
+  font-family: var(--serif);
+  font-size: 1.7rem; font-style: italic; color: var(--gold-2); font-weight: 400;
+}
+.stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
+}
+.stat {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(179,163,105,0.18);
+  border-radius: var(--r); padding: 1rem 1.1rem;
+}
+.stat-n {
+  display: block; font-family: var(--serif);
+  font-size: 1.9rem; font-weight: 700; color: var(--gold-2); line-height: 1;
+}
+.stat-l {
+  display: block; margin-top: 0.28rem;
+  font-family: var(--mono); font-size: 0.58rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.38);
+}
+
+/* ── NAV CARDS SECTION ── */
+.explore { background: var(--surf); padding: 5rem 0; }
+.ncards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.nc {
+  display: block; text-decoration: none;
+  border: 1px solid var(--bdr); border-radius: var(--r);
+  overflow: hidden; background: var(--white); box-shadow: var(--sh);
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+  color: inherit;
+}
+.nc:hover { border-color: var(--g-bdr2); box-shadow: var(--sh2); transform: translateY(-4px); }
+.nc-thumb {
+  height: 150px; background-size: cover; background-position: center;
+  position: relative; overflow: hidden;
+}
+.nc-thumb::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,22,46,0.8) 0%, transparent 55%); z-index: 1;
+}
+.nc-label {
+  position: absolute; bottom: 0.8rem; left: 1rem; right: 1rem; z-index: 2;
+  font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: #fff; font-weight: 400;
+}
+.nc-body { padding: 1rem 1.2rem 1.2rem; }
+.nc-desc { font-size: 0.8rem; color: var(--tx2); line-height: 1.62; margin-bottom: 0.65rem; }
+.nc-arr {
+  font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em;
+  color: var(--gold); display: flex; align-items: center; gap: 0.4rem;
+}
+.nc-arr::after { content: '→'; }
+
+/* animations */
+@keyframes up { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+.hl > *:nth-child(1) { animation: up 0.55s ease 0.05s both; }
+.hl > *:nth-child(2) { animation: up 0.55s ease 0.15s both; }
+.hl > *:nth-child(3) { animation: up 0.55s ease 0.27s both; }
+.hl > *:nth-child(4) { animation: up 0.55s ease 0.40s both; }
+.hl > *:nth-child(5) { animation: up 0.55s ease 0.52s both; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hl { padding: 3rem 1.25rem; }
+  .hr { height: 45vh; min-height: 260px; }
+  .ncards { grid-template-columns: 1fr; }
+  .explore { padding: 3rem 0; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nb" href="index.html">
+    <span class="nb-name">Nicholas M. Choi</span>
+    <span class="nb-sub">ECE @ Georgia Tech</span>
+  </a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html" class="on">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="threads.html">Threads</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nt" id="nt" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hl">
+    <div class="h-eyebrow">Computer Engineering · Class of 2029</div>
+    <h1 class="h1">Engineering the<br><em>future</em> of silicon<br>and software.</h1>
+    <p class="h-sub">I'm Nicholas Choi, a first-year ECE student at Georgia Tech pursuing the CHEA and DSSD threads. My interests center on VLSI design, embedded systems, and the boundary where hardware meets intelligent software.</p>
+    <div class="ctas">
+      <a href="projects.html" class="btn btn-p">View My Projects</a>
+      <a href="about.html" class="btn btn-g">About Me</a>
+    </div>
+    <div class="badges">
+      <span class="badge">CHEA Thread</span>
+      <span class="badge">DSSD Thread</span>
+      <span class="badge">VLSI</span>
+      <span class="badge">GPA 3.61</span>
+      <span class="badge">RoboJackets</span>
+    </div>
+  </div>
+
+  <div class="hr">
+    <div class="hr-photo"></div>
+    <div class="hr-ov"></div>
+    <div class="monogram"><span>NC</span></div>
+    <div class="hr-ct">
+      <div class="stats">
+        <div class="stat"><span class="stat-n">3.61</span><span class="stat-l">GPA</span></div>
+        <div class="stat"><span class="stat-n">2028</span><span class="stat-l">Graduation</span></div>
+        <div class="stat"><span class="stat-n">4yr</span><span class="stat-l">Robotics</span></div>
+        <div class="stat"><span class="stat-n">3</span><span class="stat-l">Languages</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="explore">
+  <div class="wrap">
+    <div class="ey" style="margin-bottom:0.75rem">Explore</div>
+    <h2 class="h-lg">Navigate My Portfolio</h2>
+    <div class="ncards">
+      <a href="about.html" class="nc">
+        <div class="nc-thumb" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tech_Tower_at_Georgia_Tech.jpg/800px-Tech_Tower_at_Georgia_Tech.jpg')"><div class="nc-label">About Me</div></div>
+        <div class="nc-body"><p class="nc-desc">My story, interests in VLSI and computer engineering, and what drives my passion for hardware design.</p><div class="nc-arr">Read bio</div></div>
+      </a>
+      <a href="threads.html" class="nc">
+        <div class="nc-thumb" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Georgia_Tech_Van_Leer_Building.jpg/800px-Georgia_Tech_Van_Leer_Building.jpg')"><div class="nc-label">CHEA &amp; DSSD Threads</div></div>
+        <div class="nc-body"><p class="nc-desc">My ECE curriculum threads, VLSI coursework, and academic roadmap at Georgia Tech.</p><div class="nc-arr">Explore threads</div></div>
+      </a>
+      <a href="projects.html" class="nc">
+        <div class="nc-thumb" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Georgia_Institute_of_Technology_Library.jpg/800px-Georgia_Institute_of_Technology_Library.jpg')"><div class="nc-label">Projects</div></div>
+        <div class="nc-body"><p class="nc-desc">FPGA, VLSI foundations, clinical AI, and competitive robotics — a growing portfolio.</p><div class="nc-arr">View work</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p>
+  <span>GT · Class of 2029</span>
+</footer>
+<script>
+  const t=document.getElementById('nt'),l=document.getElementById('nl');
+  if(t)t.addEventListener('click',()=>l.classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Me | Nicholas M. Choi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.ag { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
+.at p { font-size: 0.95rem; color: var(--tx2); line-height: 1.85; margin-bottom: 1.25rem; }
+.at p:first-child { font-size: 1.02rem; color: var(--tx1); font-weight: 500; }
+
+/* sidebar */
+.asb { position: sticky; top: calc(var(--nh) + 1.5rem); }
+.pc { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--r); box-shadow: var(--sh); overflow: hidden; margin-bottom: 1.25rem; }
+.pc-h { background: var(--navy); padding: 1.4rem 1.5rem; }
+.pc-h .ey { color: rgba(211,200,138,0.75); margin-bottom: 0.4rem; }
+.pc-h .ey::before { background: rgba(211,200,138,0.55); }
+.pc-h h3 { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: #fff; font-weight: 400; }
+.pc-b { padding: 0 1.5rem; }
+.tc { background: var(--white); border: 1px solid var(--bdr); border-radius: var(--r); padding: 1.3rem 1.4rem; box-shadow: var(--sh); }
+.tc .ey { margin-bottom: 0.8rem; }
+.tw { display: flex; flex-wrap: wrap; gap: 0.38rem; margin-top: 0.6rem; }
+
+/* pullquote */
+.pq { margin: 2.5rem 0; padding: 1.5rem 1.75rem; border-left: 3px solid var(--gold); border-radius: 0 var(--r) var(--r) 0; background: var(--g-dim); }
+.pq blockquote { font-family: var(--serif); font-style: italic; font-size: 1.08rem; color: var(--navy); line-height: 1.6; font-weight: 400; }
+.pq cite { display: block; margin-top: 0.6rem; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.07em; font-style: normal; }
+
+/* photo strip */
+.ps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.85rem; margin: 2.5rem 0; }
+.psi { border-radius: var(--r); overflow: hidden; height: 155px; position: relative; background: var(--surf); }
+.psi img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.87) saturate(0.72); transition: filter 0.3s; }
+.psi:hover img { filter: brightness(0.97) saturate(0.88); }
+.psi figcaption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,22,46,0.82) 0%, transparent); padding: 0.8rem 0.7rem 0.45rem; font-family: var(--mono); font-size: 0.59rem; letter-spacing: 0.07em; color: rgba(255,255,255,0.68); }
+
+/* interests */
+.ig { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.5rem; }
+.ic { border: 1px solid var(--bdr); border-radius: var(--r); padding: 1.2rem 1.25rem; background: var(--white); box-shadow: var(--sh); transition: border-color 0.18s, box-shadow 0.18s, transform 0.15s; }
+.ic:hover { border-color: var(--g-bdr2); box-shadow: var(--sh2); transform: translateY(-2px); }
+.ic-icon { font-size: 1.3rem; margin-bottom: 0.5rem; line-height: 1; }
+.ic-t { font-weight: 600; font-size: 0.86rem; color: var(--navy); margin-bottom: 0.28rem; }
+.ic-d { font-size: 0.78rem; color: var(--tx2); line-height: 1.58; }
+
+@media (max-width: 860px) {
+  .ag { grid-template-columns: 1fr; gap: 2.5rem; }
+  .asb { position: static; }
+  .ig { grid-template-columns: 1fr 1fr; }
+  .ps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .ig { grid-template-columns: 1fr; }
+  .ps { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nb" href="index.html"><span class="nb-name">Nicholas M. Choi</span><span class="nb-sub">ECE @ Georgia Tech</span></a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li><li><a href="about.html" class="on">About</a></li>
+    <li><a href="threads.html">Threads</a></li><li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li><li><a href="goals.html">Goals</a></li>
+    <li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="ph">
+  <div class="ph-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tech_Tower_at_Georgia_Tech.jpg/1280px-Tech_Tower_at_Georgia_Tech.jpg')"></div>
+  <div class="ph-ov"></div>
+  <div class="ph-ct"><div class="ey">Biography</div><h1>About Me</h1></div>
+</div>
+
+<div class="pb">
+  <div class="wrap">
+    <div class="ag">
+      <div class="at">
+        <p>My name is Nicholas Choi. I am a Computer Engineering student at the Georgia Institute of Technology, originally from Fulton, Maryland, and I have been drawn to hardware and electronics for as long as I can remember.</p>
+        <p>Growing up, I was the kind of person who took things apart to understand how they worked. That curiosity led me to robotics, where by high school I was serving as Vice President of a competitive robotics team, managing hardware design, integrating systems across electrical and mechanical disciplines, and mentoring younger engineers. Four years of building real machines under real competition pressure shaped how I approach engineering: methodically, collaboratively, and with a relentless focus on whether the system actually works.</p>
+        <p>At Georgia Tech, I am pursuing the CHEA (Computing Hardware Emerging Architectures) and DSSD (Digital Signal and System Design) threads within ECE. These threads reflect my deepest engineering interests. CHEA is where VLSI design lives, the process of translating digital logic into physical silicon by navigating tradeoffs between power, speed, and area. DSSD adds rigorous system-level thinking through signal processing and mathematical modeling. Together they prepare me for the hardware intelligence problems I want to work on.</p>
+        <p>That interest shows up across my current work. On the RoboJackets autonomous vehicle team I design power distribution systems and write real-time C++ firmware for embedded microcontrollers. In ECE 2020 I am designing digital logic in Verilog on FPGAs from gate-level primitives through full arithmetic units. This semester I also co-developed Bacter.ai, a clinical AI platform I built from backend machine learning pipelines through to a live React frontend.</p>
+        <p>Beyond engineering, I am a freshman representative in the Korean Undergraduate Student Association, where I help plan cultural events and support the GT community. I speak English, French, and Korean, and find that navigating multiple languages makes me a more attentive collaborator.</p>
+
+        <div class="pq">
+          <blockquote>"The details are not the details. They make the design."</blockquote>
+          <cite>Charles Eames</cite>
+        </div>
+
+        <div class="ps">
+          <figure class="psi"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tech_Tower_at_Georgia_Tech.jpg/640px-Tech_Tower_at_Georgia_Tech.jpg" alt="Tech Tower" loading="lazy"/><figcaption>Tech Tower</figcaption></figure>
+          <figure class="psi"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Georgia_Tech_Van_Leer_Building.jpg/640px-Georgia_Tech_Van_Leer_Building.jpg" alt="Van Leer — ECE Home" loading="lazy"/><figcaption>Van Leer — ECE Home</figcaption></figure>
+          <figure class="psi"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Georgia_Institute_of_Technology_Library.jpg/640px-Georgia_Institute_of_Technology_Library.jpg" alt="Price Gilbert Library" loading="lazy"/><figcaption>Price Gilbert Library</figcaption></figure>
+        </div>
+
+        <div style="margin-top:3.5rem">
+          <div class="ey" style="margin-bottom:0.7rem">What I Care About</div>
+          <h2 class="h-md" style="margin-bottom:1.5rem">Interests &amp; Passions</h2>
+          <div class="ig">
+            <div class="ic"><div class="ic-icon">🔬</div><div class="ic-t">VLSI Design</div><div class="ic-d">From logic synthesis to physical layout — designing chips that balance power, performance, and area is my core interest.</div></div>
+            <div class="ic"><div class="ic-icon">⚙️</div><div class="ic-t">Embedded Systems</div><div class="ic-d">Writing firmware that interfaces directly with hardware is where I feel most at home as an engineer.</div></div>
+            <div class="ic"><div class="ic-icon">🤖</div><div class="ic-t">Autonomous Robotics</div><div class="ic-d">Four years of competitive robotics built my foundation. Now I contribute to autonomous vehicles at RoboJackets.</div></div>
+            <div class="ic"><div class="ic-icon">💻</div><div class="ic-t">Digital Systems</div><div class="ic-d">I love working across the stack, from FPGA HDL and Verilog to full-stack web platforms when the problem calls for it.</div></div>
+            <div class="ic"><div class="ic-icon">🧠</div><div class="ic-t">AI on the Edge</div><div class="ic-d">Running intelligent algorithms close to the hardware, with real-time constraints, fascinates me as a design challenge.</div></div>
+            <div class="ic"><div class="ic-icon">🌏</div><div class="ic-t">Languages and Culture</div><div class="ic-d">English, French, and Korean. Language shapes how I think, collaborate, and build community at GT.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="asb">
+        <div class="pc">
+          <div class="pc-h"><div class="ey">Student Profile</div><h3>Nicholas M. Choi</h3></div>
+          <div class="pc-b">
+            <div class="ir"><span class="ik">Major</span><span class="iv">B.S. Computer Eng.</span></div>
+            <div class="ir"><span class="ik">University</span><span class="iv">Georgia Tech</span></div>
+            <div class="ir"><span class="ik">Threads</span><span class="iv">CHEA &amp; DSSD</span></div>
+            <div class="ir"><span class="ik">GPA</span><span class="iv">3.61 / 4.0</span></div>
+            <div class="ir"><span class="ik">Graduation</span><span class="iv">May 2028</span></div>
+            <div class="ir"><span class="ik">Hometown</span><span class="iv">Fulton, MD</span></div>
+            <div class="ir"><span class="ik">Languages</span><span class="iv">EN · FR · KO</span></div>
+            <div class="ir"><span class="ik">Focus</span><span class="iv">VLSI, Embedded</span></div>
+            <div class="ir"><span class="ik">Seeking</span><span class="iv">Internship '26</span></div>
+            <div class="ir" style="padding-bottom:1.25rem"><span class="ik">LinkedIn</span><span class="iv"><a href="https://www.linkedin.com/in/nicholas-choi-gt2029/" target="_blank">nicholas-choi-gt2029</a></span></div>
+          </div>
+        </div>
+        <div class="tc">
+          <div class="ey">Technical Interests</div>
+          <div class="tw">
+            <span class="pill">VLSI Design</span><span class="pill">Verilog HDL</span><span class="pill">FPGA</span>
+            <span class="pill">Embedded C++</span><span class="pill">Computer Architecture</span>
+            <span class="pill">Digital Logic</span><span class="pill">Signal Processing</span>
+            <span class="pill">Machine Learning</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="ft">
+  <p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p>
+  <span>GT · Class of 2029</span>
+</footer>
+<script>const t=document.getElementById('nt'),l=document.getElementById('nl');if(t)t.addEventListener('click',()=>l.classList.toggle('open'));</script>
+</body>
+</html>
