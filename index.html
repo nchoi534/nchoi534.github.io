@@ -6,7 +6,7 @@
 <title>Nicholas M. Choi | ECE @ Georgia Tech</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Spacing+Mono&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 <style>
 /* ── HERO ── */
@@ -30,9 +30,9 @@
 }
 .hl > * { position: relative; z-index: 1; }
 .h-eyebrow {
-  font-family: var(--mono);
-  font-size: 0.65rem; font-weight: 500;
-  letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem; font-weight: 400; font-style: italic;
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1.2rem;
   display: flex; align-items: center; gap: 10px;
 }
@@ -63,7 +63,7 @@
 }
 .hr-photo {
   position: absolute; inset: 0;
-  background: url('gt-techtower.webp center/cover;
+  background: url('gt-techtower.webp') center/cover;
   filter: brightness(0.38) saturate(0.55);
   transition: transform 10s ease;
 }
@@ -157,7 +157,7 @@
 <body>
 <nav class="nav">
   <a class="nb" href="index.html"><span class="nb-name">Nicholas M. Choi</span><span class="nb-sub">ECE @ Georgia Tech</span></a>
-    <ul class="nl" id="nl">
+  <ul class="nl" id="nl">
     <li><a href="index.html" class="on">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="academics.html">Academics</a></li>
@@ -208,15 +208,15 @@
     <h2 class="h-lg">Navigate My Portfolio</h2>
     <div class="ncards">
       <a href="about.html" class="nc">
-        <div class="nc-thumb" style="background-image:url('gt-techtower.webp class="nc-label">About Me</div></div>
+        <div class="nc-thumb" style="background-image:url('gt-techtower.webp')"><div class="nc-label">About Me</div></div>
         <div class="nc-body"><p class="nc-desc">My story, interests in VLSI and computer engineering, and what drives my passion for hardware design.</p><div class="nc-arr">Read bio</div></div>
       </a>
       <a href="academics.html" class="nc">
-        <div class="nc-thumb" style="background-image:url('gt-vanleer.webp class="nc-label">CHEA &amp; DSSD Threads</div></div>
+        <div class="nc-thumb" style="background-image:url('gt-vanleer.webp')"><div class="nc-label">CHEA &amp; DSSD Threads</div></div>
         <div class="nc-body"><p class="nc-desc">My ECE curriculum threads, VLSI coursework, and academic roadmap at Georgia Tech.</p><div class="nc-arr">Explore threads</div></div>
       </a>
       <a href="projects.html" class="nc">
-        <div class="nc-thumb" style="background-image:url('gt-library.webp class="nc-label">Projects</div></div>
+        <div class="nc-thumb" style="background-image:url('gt-library.webp')"><div class="nc-label">Projects</div></div>
         <div class="nc-body"><p class="nc-desc">FPGA, VLSI foundations, clinical AI, and competitive robotics — a growing portfolio.</p><div class="nc-arr">View work</div></div>
       </a>
     </div>
