@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Academics | Nicholas M. Choi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.intro{max-width:700px;margin-bottom:4rem}
+.intro p{font-size:0.95rem;color:var(--tx2);line-height:1.87;margin-bottom:1.1rem}
+.tp{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:4rem}
+.tc2{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.tc2-h{padding:1.85rem 1.85rem 1.5rem}
+.tc2.chea .tc2-h{background:var(--navy)}
+.tc2.dssd .tc2-h{background:#0a3525}
+.tc2-h .ey{margin-bottom:0.55rem}
+.tc2.chea .tc2-h .ey{color:rgba(211,200,138,0.75)}
+.tc2.chea .tc2-h .ey::before{background:rgba(211,200,138,0.55)}
+.tc2.dssd .tc2-h .ey{color:rgba(130,210,150,0.7)}
+.tc2.dssd .tc2-h .ey::before{background:rgba(130,210,150,0.55)}
+.tc2-h h3{font-family:var(--serif);font-size:1.45rem;color:#fff;font-weight:700;line-height:1.15}
+.tc2-b{padding:1.75rem 1.85rem;background:var(--white)}
+.tc2-b p{font-size:0.87rem;color:var(--tx2);line-height:1.82;margin-bottom:1.2rem}
+.cl{list-style:none}
+.ci{display:flex;gap:1rem;padding:0.78rem 0;border-bottom:1px solid var(--g-bdr)}
+.ci:last-child{border-bottom:none}
+.cn{font-family:var(--mono);font-size:0.65rem;color:var(--gold);font-weight:500;flex-shrink:0;min-width:64px;padding-top:2px}
+.ct{font-size:0.86rem;font-weight:600;color:var(--navy);margin-bottom:0.12rem}
+.cd{font-size:0.77rem;color:var(--tx2);line-height:1.58}
+.vb{background:var(--navy);border-radius:var(--r);padding:2.75rem;margin-bottom:4rem;display:grid;grid-template-columns:1fr 1fr;gap:2.75rem;align-items:start;box-shadow:var(--sh3)}
+.vb h3{font-family:var(--serif);font-size:1.9rem;color:#fff;font-weight:700;margin-bottom:0.85rem;line-height:1.1}
+.vb h3 em{font-style:italic;color:var(--gold-2);font-weight:400}
+.vb p{font-size:0.87rem;color:rgba(255,255,255,0.55);line-height:1.82;margin-bottom:0.9rem}
+.vp{display:flex;flex-direction:column;gap:0.55rem}
+.vp-ey{font-family:var(--mono);font-size:0.63rem;font-weight:500;letter-spacing:0.17em;text-transform:uppercase;color:rgba(211,200,138,0.72);display:flex;align-items:center;gap:9px;margin-bottom:0.7rem}
+.vp-ey::before{content:'';width:22px;height:1px;background:currentColor;flex-shrink:0}
+.vr{background:rgba(255,255,255,0.07);border:1px solid rgba(179,163,105,0.15);border-radius:var(--r);padding:0.82rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:0.75rem}
+.vr-n{font-size:0.84rem;color:rgba(255,255,255,0.82)}
+.vr-c{font-family:var(--mono);font-size:0.62rem;color:var(--gold);flex-shrink:0}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;margin-bottom:4rem}
+.rm{position:relative;padding-left:1.5rem}
+.rm::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--g-bdr)}
+.rmi{position:relative;margin-bottom:2rem}
+.rmi::before{content:'';position:absolute;left:-1.5rem;top:5px;width:11px;height:11px;border:2px solid var(--gold);border-radius:50%;background:var(--bg);z-index:1}
+.rmi.done::before{background:var(--gold)}
+.rmy{font-family:var(--mono);font-size:0.62rem;color:var(--gold);letter-spacing:0.06em;margin-bottom:0.2rem}
+.rml{font-weight:600;color:var(--navy);font-size:0.9rem;margin-bottom:0.2rem}
+.rmd{font-size:0.82rem;color:var(--tx2);line-height:1.6}
+.mb{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-bottom:4rem}
+.ms{padding:1.4rem 1.3rem;border-right:1px solid var(--bdr)}
+.ms:last-child{border-right:none}
+.ms.now{background:var(--navy)}
+.mbadge{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:0.12rem 0.48rem;border-radius:3px;display:inline-block;margin-bottom:0.45rem;font-weight:600}
+.msy{font-family:var(--mono);font-size:0.61rem;color:var(--gold);letter-spacing:0.06em;margin-bottom:0.28rem}
+.ms.now .msy{color:var(--gold-2)}
+.msl{font-weight:600;font-size:0.86rem;color:var(--navy);margin-bottom:0.2rem}
+.ms.now .msl{color:#fff}
+.msd{font-size:0.76rem;color:var(--tx2);line-height:1.52}
+.ms.now .msd{color:rgba(255,255,255,0.45)}
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:3.75rem}
+.gc{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.gc-h{padding:1.65rem 1.85rem}
+.gc-h.st{background:var(--navy)}.gc-h.lt{background:#0a3020}
+.gc-h .ey{color:rgba(211,200,138,0.7);margin-bottom:0.5rem}
+.gc-h .ey::before{background:rgba(211,200,138,0.5)}
+.gc-h h3{font-family:var(--serif);font-size:1.42rem;color:#fff;font-weight:700;line-height:1.15}
+.gc-b{padding:1.65rem 1.85rem;background:var(--white)}
+.gc-b>p{font-size:0.87rem;color:var(--tx2);line-height:1.82;margin-bottom:1.1rem}
+.gs{list-style:none;display:flex;flex-direction:column;gap:0.85rem}
+.gs li{display:flex;gap:0.85rem;align-items:flex-start;font-size:0.86rem;color:var(--tx2);line-height:1.7}
+.gn{flex-shrink:0;width:22px;height:22px;background:var(--navy);color:var(--gold);border-radius:50%;font-size:0.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--mono);margin-top:3px}
+.fb{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);padding:2.75rem;display:grid;grid-template-columns:240px 1fr;gap:2.75rem;align-items:start}
+.fb h3{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:var(--navy);line-height:1.1;margin-top:0.4rem}
+.fb p{font-size:0.9rem;color:var(--tx2);line-height:1.85;margin-bottom:0.9rem}
+@media(max-width:860px){
+  .tp{grid-template-columns:1fr}.vb{grid-template-columns:1fr;padding:2rem}
+  .rg{grid-template-columns:1fr;gap:2.5rem}
+  .mb{grid-template-columns:1fr 1fr}.ms{border-right:none;border-bottom:1px solid var(--bdr)}.ms:last-child{border-bottom:none}
+  .gg{grid-template-columns:1fr}.fb{grid-template-columns:1fr;padding:2rem}
+  .gc-h,.gc-b,.tc2-h,.tc2-b{padding:1.4rem 1.5rem}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="nb" href="index.html"><span class="nb-name">Nicholas M. Choi</span><span class="nb-sub">ECE @ Georgia Tech</span></a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="academics.html" class="on">Academics</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="ph">
+  <div class="ph-bg" style="background-image:url('gt-vanleer.webp')"></div>
+  <div class="ph-ov"></div>
+  <div class="ph-ct"><div class="ey">Curriculum &amp; Goals</div><h1>Academics</h1></div>
+</div>
+
+<div class="pb"><div class="wrap">
+
+<div class="intro">
+  <div class="sh"><div class="ey">ECE Threads</div><h2 class="h-lg" style="margin-top:0.7rem">How I'm Specializing at Georgia Tech</h2></div>
+  <p>Georgia Tech's ECE program is structured around a threading system where every student picks two areas to go deep in. The threads shape which electives you take, which research opportunities you qualify for, and what kind of engineer you come out as. I chose Computing Hardware Emerging Architectures (CHEA) and Digital Signal and System Design (DSSD).</p>
+  <p>CHEA is the natural home for someone who wants to design chips. It covers digital logic and Verilog all the way through VLSI layout and advanced processor architecture. DSSD adds the mathematical and systems-level foundation that I think serious hardware engineers need but don't always have. Understanding how signals flow through a system and how to reason about them mathematically makes you better at designing the hardware that processes those signals. The combination made sense to me from the start.</p>
+</div>
+
+<div class="tp">
+  <div class="tc2 chea">
+    <div class="tc2-h"><div class="ey">Thread One</div><h3>Computing Hardware<br>Emerging Architectures</h3></div>
+    <div class="tc2-b">
+      <p>CHEA covers the hardware foundations of computing from the ground up: digital logic, processor architecture, VLSI design, and the physical principles connecting transistors to real systems. This thread ties my current Verilog work to chip design further down the road.</p>
+      <ul class="cl">
+        <li class="ci"><span class="cn">ECE 2020</span><div><div class="ct">Digital System Design</div><div class="cd">Verilog HDL, combinational and sequential logic, FSMs, simulation and synthesis. Currently in progress.</div></div></li>
+        <li class="ci"><span class="cn">ECE 3030</span><div><div class="ct">Physical Foundations of CE</div><div class="cd">Semiconductor device physics and the basis for transistors and integrated circuit behavior.</div></div></li>
+        <li class="ci"><span class="cn">ECE 3150</span><div><div class="ct">VLSI and Advanced Digital Design</div><div class="cd">CMOS design, place and route, architectural modeling through circuit simulation in Cadence Virtuoso.</div></div></li>
+        <li class="ci"><span class="cn">ECE 4130</span><div><div class="ct">Advanced VLSI Systems</div><div class="cd">Complex VLSI analysis and testing, high-speed and low-power digital design techniques.</div></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tc2 dssd">
+    <div class="tc2-h"><div class="ey">Thread Two</div><h3>Digital Signal and<br>System Design</h3></div>
+    <div class="tc2-b">
+      <p>DSSD gives the mathematical backbone that every hardware engineer needs: discrete-time systems, filter design, probability, and signal processing methods that show up in everything from communications hardware to verification.</p>
+      <ul class="cl">
+        <li class="ci"><span class="cn">ECE 2026</span><div><div class="ct">Intro to Signal Processing</div><div class="cd">Discrete-time signals, filtering, DFT, Z-Transform, and sampling theory.</div></div></li>
+        <li class="ci"><span class="cn">ECE 3077</span><div><div class="ct">Probability and Statistics</div><div class="cd">Statistical methods for signal analysis, noise modeling, and hardware verification workflows.</div></div></li>
+        <li class="ci"><span class="cn">ECE 4270</span><div><div class="ct">Fundamentals of DSP</div><div class="cd">Advanced filter design, spectral analysis, multirate processing, and hardware implementation.</div></div></li>
+        <li class="ci"><span class="cn">ECE 4450</span><div><div class="ct">Computer Communications</div><div class="cd">Network protocols, signal transmission, and system-level communication hardware design.</div></div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="vb">
+  <div>
+    <div class="vp-ey">Deep Dive</div>
+    <h3>Why <em>VLSI</em> Excites Me</h3>
+    <p>There is something specific about VLSI that I find more compelling than most other areas of engineering. You start with logic that only exists as a description, a few lines of Verilog or a circuit schematic, and you end up with a physical structure on silicon that does exactly what you described. Every decision you make, how wide to size a transistor, how to route the clock tree, where to place cells to minimize wire length, has real physical consequences. Nothing gets hand-waved away.</p>
+    <p>My current work in ECE 2020 is the beginning of that. Designing the GT-8 Calculator ALU from gate level up through a full ripple carry adder, then writing a self-checking testbench that catches signed overflow and two's complement edge cases, is early practice for the discipline VLSI requires at much larger scales. When ECE 3150 comes around, I'll be working in Cadence Virtuoso with real layout tools. That trajectory is intentional.</p>
+    <p>Longer term I am drawn to how VLSI intersects with machine learning hardware. Designing inference accelerators, chips that run neural networks within tight power and area budgets, requires exactly this kind of work.</p>
+  </div>
+  <div class="vp">
+    <div class="vp-ey">VLSI Pathway</div>
+    <div class="vr"><span class="vr-n">Digital System Design (now)</span><span class="vr-c">ECE 2020</span></div>
+    <div class="vr"><span class="vr-n">Physical Foundations of CE</span><span class="vr-c">ECE 3030</span></div>
+    <div class="vr"><span class="vr-n">VLSI and Advanced Digital Design</span><span class="vr-c">ECE 3150</span></div>
+    <div class="vr"><span class="vr-n">Computer Architecture</span><span class="vr-c">ECE 3058</span></div>
+    <div class="vr"><span class="vr-n">Advanced VLSI Systems</span><span class="vr-c">ECE 4130</span></div>
+  </div>
+</div>
+
+<hr class="div"/>
+
+<div class="rg">
+  <div>
+    <div class="ey" style="margin-bottom:0.7rem">Academic Roadmap</div>
+    <h2 class="h-md" style="margin-bottom:2rem">Thread Milestones</h2>
+    <div class="rm">
+      <div class="rmi done"><div class="rmy">Fall 2025</div><div class="rml">ECE 1100 — Freshman Seminar</div><div class="rmd">First exposure to the thread system. Mapped out CHEA and DSSD as the path that made the most sense for what I want to do.</div></div>
+      <div class="rmi done"><div class="rmy">Spring 2026 — Now</div><div class="rml">ECE 2020 — Digital Systems Design</div><div class="rmd">Verilog, digital logic, and the GT-8 Calculator project. Building the foundation everything else depends on.</div></div>
+      <div class="rmi"><div class="rmy">Fall 2026</div><div class="rml">ECE 2031 + ECE 2026</div><div class="rmd">Digital design lab and intro signal processing in the same semester, hitting both thread cores at once.</div></div>
+      <div class="rmi"><div class="rmy">2027</div><div class="rml">ECE 3150 — VLSI and Advanced Digital Design</div><div class="rmd">The course I have been pointed toward since freshman year. CMOS layout, place and route, Cadence Virtuoso.</div></div>
+      <div class="rmi"><div class="rmy">2027 to 2028</div><div class="rml">ECE 4130 — Advanced VLSI Systems</div><div class="rmd">Capstone VLSI. High-speed and low-power chip design at the architectural level.</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="ey" style="margin-bottom:0.7rem">Why These Two</div>
+    <h2 class="h-md" style="margin-bottom:1.25rem">The CHEA + DSSD Combination</h2>
+    <p style="font-size:0.9rem;color:var(--tx2);line-height:1.85;margin-bottom:1rem">The way I think about it: CHEA teaches me how to build hardware and DSSD teaches me what that hardware has to handle. A chip designer who does not understand signal processing will eventually make architectural decisions that look correct on paper but fall apart when data actually flows through the system. Taking both threads together addresses that gap directly.</p>
+    <p style="font-size:0.9rem;color:var(--tx2);line-height:1.85;margin-bottom:1rem">There is also a practical dimension. The roles I am most interested in after graduation, whether that is hardware verification at a semiconductor company, embedded systems at a robotics firm, or something closer to AI hardware, tend to sit exactly where these two areas overlap. Engineers who can reason about both the circuit and the algorithm running on it are harder to find and more useful.</p>
+    <p style="font-size:0.9rem;color:var(--tx2);line-height:1.85">I did not choose these threads because someone told me to. I chose them because they map to what I find genuinely interesting, and because they give me the most direct path toward the kind of work I actually want to do.</p>
+  </div>
+</div>
+
+<hr class="div"/>
+
+<div class="sh"><div class="ey">Career Goals</div><h2 class="h-lg" style="margin-top:0.7rem">Where I'm Headed</h2></div>
+<p style="font-size:0.95rem;color:var(--tx2);line-height:1.87;max-width:700px;margin-bottom:3.5rem">My long-term goal is to work in hardware design, specifically in VLSI, computer architecture, or hardware-accelerated computing. I want to design chips and systems that sit at the boundary of what is physically possible. Getting there is a four-year project I am already executing on, and the thread plan above is a big part of it.</p>
+
+<div class="mb">
+  <div class="ms now"><div class="mbadge">Now</div><div class="msy">2025 to 2026</div><div class="msl">Freshman Year</div><div class="msd">RoboJackets, ECE 2020, Bacter.ai. Building the base.</div></div>
+  <div class="ms"><div class="msy">Summer 2026</div><div class="msl">First Internship</div><div class="msd">System test or hardware verification role at a semiconductor or embedded systems company.</div></div>
+  <div class="ms"><div class="msy">2027 to 2028</div><div class="msl">VLSI Coursework</div><div class="msd">ECE 3150, ECE 4130, and undergraduate research alongside them if I can.</div></div>
+  <div class="ms"><div class="msy">2028 onward</div><div class="msl">Graduation and Beyond</div><div class="msd">Industry, grad school, or hardware startup. Keeping the door open.</div></div>
+</div>
+
+<div class="gg">
+  <div class="gc">
+    <div class="gc-h st"><div class="ey">Short-Term · 2025 to 2028</div><h3>Building the Foundation</h3></div>
+    <div class="gc-b">
+      <p>The next three years are about getting the fundamentals right and having real professional experience behind me before I graduate. None of it happens without staying consistent and being intentional about every semester.</p>
+      <ul class="gs">
+        <li><span class="gn">1</span>Land a System Test or Hardware Verification internship for Summer 2026. I want hands-on exposure to professional verification workflows before my junior year, not after it.</li>
+        <li><span class="gn">2</span>Complete both thread tracks on schedule, hitting ECE 3150 and ECE 4130 by May 2028. These are the courses the rest of my plan depends on.</li>
+        <li><span class="gn">3</span>Get into an undergraduate research lab. Whether through ORS or connecting with an ECE professor directly, I want real research experience before graduation to figure out whether grad school makes sense for me.</li>
+        <li><span class="gn">4</span>Grow into a leadership role at RoboJackets. I have learned a lot from the team this year and I want to start giving some of that back to people coming in behind me.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="gc">
+    <div class="gc-h lt"><div class="ey">Long-Term · 2028 and Beyond</div><h3>Shaping the Field</h3></div>
+    <div class="gc-b">
+      <p>I am not locked into one specific outcome, but the direction is clear: serious hardware engineering at the frontier of what chips can do, wherever that ends up being.</p>
+      <ul class="gs">
+        <li><span class="gn">1</span>Work at a company building hardware that matters, whether that is a semiconductor company like NVIDIA or Intel, a robotics firm, or a hardware startup where the engineering problems are genuinely hard.</li>
+        <li><span class="gn">2</span>Seriously consider an M.S. or Ph.D. in computer architecture or VLSI systems, especially if undergraduate research opens a direction worth pursuing at depth.</li>
+        <li><span class="gn">3</span>Contribute to systems at the boundary of intelligence and physical constraints: inference accelerators, embedded medical devices, autonomous systems hardware.</li>
+        <li><span class="gn">4</span>Mentor people coming up behind me. I have done this already at Reservoir Robotics and it is something I plan to keep doing throughout my career.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="fb">
+  <div><div class="ey" style="margin-bottom:0.45rem">The Bigger Picture</div><h3>VLSI and Hardware Intelligence</h3></div>
+  <div>
+    <p>The problem I find most interesting right now is the gap between what neural networks can do algorithmically and what we can actually run on a chip. Training a large model in a data center is one problem. Running it in real time on a device with a 5-watt power budget and no internet connection is a different one entirely, and it is a hardware problem first and foremost.</p>
+    <p>CHEA gives me the circuit-level tools to design for power and performance. DSSD gives me the mathematical foundation for understanding the algorithms those circuits have to run. I am not ready to build an inference accelerator yet, but every course, project, and internship between now and graduation is moving me in that direction. That is not an accident.</p>
+    <a href="projects.html" class="btn btn-p" style="margin-top:0.4rem">See My Projects</a>
+  </div>
+</div>
+
+</div></div>
+<footer class="ft"><p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p><span>GT · Class of 2029</span></footer>
+<script>const t=document.getElementById("nt"),l=document.getElementById("nl");if(t)t.addEventListener("click",()=>l.classList.toggle("open"));</script>
+</body>
+</html>
