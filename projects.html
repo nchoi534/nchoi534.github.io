@@ -9,29 +9,127 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Spacing+Mono&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 <style>
-.ft2{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);margin-bottom:4rem}
-.ft2-h{background:var(--navy);padding:2.25rem 2.25rem 2rem}
-.ft2-badge{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(211,200,138,0.8);margin-bottom:0.55rem}
-.ft2-h h2{font-family:var(--serif);font-size:clamp(1.65rem,3vw,2.3rem);color:#fff;font-weight:700;margin-bottom:0.3rem}
-.ft2-h .sub{font-size:0.83rem;color:rgba(255,255,255,0.42);font-style:italic;margin-bottom:0.9rem}
-.tr{display:flex;flex-wrap:wrap;gap:0.38rem}
-.ft2-b{padding:2.25rem;background:var(--white)}
-.ft2-b>p{font-size:0.92rem;color:var(--tx2);line-height:1.82;margin-bottom:0.95rem}
-.fc{display:grid;grid-template-columns:1fr 1fr;gap:2.25rem;margin-top:1.65rem}
-.cl2{font-family:var(--mono);font-size:0.61rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:0.65rem}
-.pg{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.pc3{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:border-color 0.18s,box-shadow 0.18s,transform 0.18s}
-.pc3:hover{border-color:var(--g-bdr2);box-shadow:var(--sh2);transform:translateY(-3px)}
-.pc3-h{padding:1.4rem 1.6rem}
-.pc3-h.nv{background:var(--navy)}.pc3-h.gr{background:#0a3020}.pc3-h.am{background:#2a1a08}.pc3-h.dm{background:#181816;opacity:.75}
-.pt{font-family:var(--mono);font-size:0.59rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(211,200,138,0.7);margin-bottom:0.42rem}
-.ptt{font-family:var(--serif);font-size:1.18rem;color:#fff;font-weight:700;line-height:1.2}
-.pc3-b{padding:1.4rem 1.6rem;background:var(--white)}
-.pc3-b .tr{margin-bottom:0.95rem}
-.pc3-b ul{list-style:none}
-.pc3-b ul li{font-size:0.84rem;color:var(--tx2);line-height:1.68;padding-left:1rem;position:relative;margin-bottom:0.38rem}
-.pc3-b ul li::before{content:'–';position:absolute;left:0;color:var(--gold)}
-@media(max-width:860px){.ft2-h{padding:1.75rem}.ft2-b{padding:1.75rem}.fc{grid-template-columns:1fr}.pg{grid-template-columns:1fr}}
+/* ── FEATURED PROJECT CARD ── */
+.proj-feat {
+  border: 1px solid var(--bdr);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--sh2);
+  margin-bottom: 4rem;
+}
+.proj-feat-h {
+  background: var(--navy);
+  padding: 2.25rem 2.25rem 2rem;
+}
+.proj-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(211,200,138,0.8); margin-bottom: 0.55rem;
+}
+.proj-feat-h h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.65rem,3vw,2.3rem); color: #fff; font-weight: 700; margin-bottom: 0.3rem;
+}
+.proj-feat-h .sub {
+  font-size: 0.83rem; color: rgba(255,255,255,0.42); font-style: italic; margin-bottom: 0.9rem;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.38rem; }
+.proj-feat-b { padding: 2.25rem; background: var(--white); }
+.proj-feat-b > p { font-size: 0.92rem; color: var(--tx2); line-height: 1.82; margin-bottom: 1rem; }
+
+/* ── IMAGE GALLERY ── */
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0 2rem;
+}
+.img-slot {
+  aspect-ratio: 4/3;
+  border-radius: var(--r);
+  overflow: hidden;
+  background: var(--surf);
+  border: 2px dashed var(--g-bdr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+  position: relative;
+}
+.img-slot:hover { border-color: var(--gold); }
+.img-slot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  position: absolute; inset: 0;
+}
+.img-slot-label {
+  font-family: var(--mono);
+  font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--tx3); text-align: center; padding: 0 0.75rem;
+  pointer-events: none;
+}
+.img-slot-icon {
+  font-size: 1.5rem; opacity: 0.35;
+}
+/* Hide placeholder when image is present */
+.img-slot img ~ .img-slot-icon,
+.img-slot img ~ .img-slot-label { display: none; }
+
+/* Wide slot spans 2 columns */
+.img-slot-wide {
+  grid-column: span 2;
+  aspect-ratio: 16/7;
+}
+
+/* 2-slot row variant */
+.img-gallery-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.75rem 0 2rem;
+}
+
+.img-caption {
+  font-family: var(--mono);
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--tx3); margin-top: -0.5rem; margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ── COLUMNS ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.25rem; margin-top: 1.5rem; }
+.col-label {
+  font-family: var(--mono);
+  font-size: 0.61rem; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.65rem;
+}
+
+/* ── SECTION DIVIDER ── */
+.proj-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 3rem 0 2.5rem;
+}
+.proj-divider-line { flex: 1; height: 1px; background: var(--g-bdr); }
+.proj-divider-text {
+  font-family: var(--mono);
+  font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--tx3); white-space: nowrap;
+}
+
+@media(max-width:860px){
+  .proj-feat-h { padding: 1.75rem; }
+  .proj-feat-b { padding: 1.75rem; }
+  .two-col { grid-template-columns: 1fr; }
+  .img-gallery { grid-template-columns: 1fr 1fr; }
+  .img-slot-wide { grid-column: span 2; }
+  .img-gallery-2 { grid-template-columns: 1fr; }
+}
+@media(max-width:560px){
+  .img-gallery { grid-template-columns: 1fr; }
+  .img-slot-wide { grid-column: span 1; aspect-ratio: 4/3; }
+}
 </style>
 </head>
 <body>
@@ -48,41 +146,150 @@
   </ul>
   <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+
 <div class="ph">
   <div class="ph-bg" style="background-image:url('gt-library.webp')"></div>
   <div class="ph-ov"></div>
   <div class="ph-ct"><div class="ey">Technical Work</div><h1>Project Portfolio</h1></div>
 </div>
+
 <div class="pb"><div class="wrap">
 
-<div class="sh"><div class="ey">Discovery Project</div><h2 class="h-lg" style="margin-top:0.7rem">Featured Work</h2></div>
-<div class="ft2">
-  <div class="ft2-h">
-    <div class="ft2-badge">Discovery Project · Team-Based · Spring 2026</div>
-    <h2>Bacter.ai — Clinical Decision Support Tool</h2>
-    <div class="sub">Full-stack genomic AI platform for antibiotic resistance prediction</div>
-    <div class="tr"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">XGBoost</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">REST API</span><span class="tag">SHAP</span></div>
+  <!-- ══════════════════════════════════════
+       FEATURED: BACTER.AI
+  ══════════════════════════════════════ -->
+  <div class="sh">
+    <div class="ey">Discovery Project</div>
+    <h2 class="h-lg" style="margin-top:0.7rem">Featured Work</h2>
   </div>
-  <div class="ft2-b">
-    <p>Bacter.ai predicts antibiotic resistance across 10 antibiotics in under 60 seconds from raw FASTA input, replacing a 3-day laboratory process. The project sits at the intersection of machine learning, bioinformatics, and clinical decision support with direct implications for patient outcomes.</p>
-    <p>I contributed both to the backend ML pipeline and the entire frontend interface, giving me end-to-end ownership of a real software product.</p>
-    <div class="fc">
-      <div><div class="cl2">What We Built</div><ul class="bl"><li>10 XGBoost classifiers trained on 4,096-dimension k-mer vectors with 5-fold cross-validation.</li><li>SHAP explainability pipeline producing antibiograms, ROC curves, and confusion matrices for clinical interpretation.</li><li>Flask REST API backend handling FASTA ingestion, feature extraction, and real-time prediction.</li><li>React and Vite frontend with animated resistance mechanism viewer, circular genome map, and live verification panel.</li></ul></div>
-      <div><div class="cl2">My Contribution</div><ul class="bl"><li>Co-developed the complete platform architecture end-to-end across backend and frontend.</li><li>Built all interactive UI components and the live panel consuming Flask API endpoints in real time.</li><li>Integrated SHAP outputs into interpretable visualizations within the clinical dashboard.</li><li>Participated in model validation and the cross-validation framework for all 10 antibiotic classifiers.</li></ul></div>
+
+  <div class="proj-feat">
+    <div class="proj-feat-h">
+      <div class="proj-badge">Discovery Project · Team-Based · Spring 2026</div>
+      <h2>Bacter.ai — Clinical Decision Support Tool</h2>
+      <div class="sub">Full-stack genomic AI platform for antibiotic resistance prediction</div>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">XGBoost</span>
+        <span class="tag">React</span><span class="tag">Vite</span><span class="tag">REST API</span><span class="tag">SHAP</span>
+      </div>
+    </div>
+    <div class="proj-feat-b">
+      <p>Bacter.ai predicts antibiotic resistance across 10 antibiotics in under 60 seconds from raw FASTA input, replacing a 3-day laboratory process. The project sits at the intersection of machine learning, bioinformatics, and clinical decision support with direct implications for patient outcomes.</p>
+      <p>I contributed both to the backend ML pipeline and the entire frontend interface, giving me end-to-end ownership of a real software product.</p>
+
+      <!-- Image gallery: 1 wide + 2 tall -->
+      <div class="img-gallery">
+        <div class="img-slot img-slot-wide">
+          <!-- Replace with: <img src="bacter-dashboard.jpg" alt="Bacter.ai dashboard"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">Dashboard screenshot</span>
+        </div>
+        <div class="img-slot">
+          <!-- Replace with: <img src="bacter-genome.jpg" alt="Circular genome map"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">Circular genome map</span>
+        </div>
+        <div class="img-slot">
+          <!-- Replace with: <img src="bacter-roc.jpg" alt="ROC curves output"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">ROC curves output</span>
+        </div>
+      </div>
+      <p class="img-caption">To add images: replace each placeholder comment with an &lt;img&gt; tag pointing to your screenshot file</p>
+
+      <div class="two-col">
+        <div>
+          <div class="col-label">What We Built</div>
+          <ul class="bl">
+            <li>10 XGBoost classifiers trained on 4,096-dimension k-mer vectors with 5-fold cross-validation.</li>
+            <li>SHAP explainability pipeline producing antibiograms, ROC curves, and confusion matrices for clinical interpretation.</li>
+            <li>Flask REST API backend handling FASTA ingestion, feature extraction, and real-time prediction.</li>
+            <li>React and Vite frontend with animated resistance mechanism viewer, circular genome map, and live verification panel.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">My Contribution</div>
+          <ul class="bl">
+            <li>Co-developed the complete platform architecture end-to-end across backend and frontend.</li>
+            <li>Built all interactive UI components and the live panel consuming Flask API endpoints in real time.</li>
+            <li>Integrated SHAP outputs into interpretable visualizations within the clinical dashboard.</li>
+            <li>Participated in model validation and the cross-validation framework for all 10 antibiotic classifiers.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<hr class="div"/>
-<div class="sh"><div class="ey">Additional Projects</div><h2 class="h-lg" style="margin-top:0.7rem">More Technical Work</h2></div>
-<div class="pg">
-  <div class="pc3"><div class="pc3-h nv"><div class="pt">Individual · Spring 2026 · In Progress</div><div class="ptt">GT-8 Calculator — 8-bit ALU on FPGA</div></div><div class="pc3-b"><div class="tr" style="margin-bottom:.95rem"><span class="tag">Verilog HDL</span><span class="tag">ModelSim</span><span class="tag">Quartus Prime</span><span class="tag">DE10-Lite FPGA</span></div><ul><li>Designed an 8-bit ALU in Verilog supporting ADD, SUB, AND, OR, XOR, and NOT with carry, overflow, and zero flags — built from gate level through a full ripple carry adder.</li><li>Authored a self-checking ModelSim testbench validating edge cases including signed overflow and two's complement subtraction.</li><li>Achieved full functional verification with automated pass/fail reporting.</li></ul></div></div>
-  <div class="pc3"><div class="pc3-h gr"><div class="pt">Team · Ongoing · RoboJackets RoboNav</div><div class="ptt">Autonomous Vehicle Electrical Systems</div></div><div class="pc3-b"><div class="tr" style="margin-bottom:.95rem"><span class="tag">C++ Firmware</span><span class="tag">Embedded Systems</span><span class="tag">Power Distribution</span></div><ul><li>Designed and documented electrical systems for autonomous ground platforms, including power distribution and control interfaces.</li><li>Implemented real-time C++ firmware on embedded microcontrollers for motion control across all vehicle components.</li><li>Conducted system-level testing and verification before field deployment.</li></ul></div></div>
-  <div class="pc3"><div class="pc3-h am"><div class="pt">Team Lead · 4 Years · Reservoir Robotics</div><div class="ptt">Competitive Robotics Hardware Platform</div></div><div class="pc3-b"><div class="tr" style="margin-bottom:.95rem"><span class="tag">Altium Designer</span><span class="tag">OnShape</span><span class="tag">Power Electronics</span></div><ul><li>Led schematic development and PCB layout of competition-grade robots with mixed-voltage power distribution.</li><li>Coordinated integration between electrical, mechanical, and software subsystems across multiple competition seasons.</li><li>Managed and mentored 8+ junior engineers in hardware design and CAD workflows.</li></ul></div></div>
-  <div class="pc3" style="border-style:dashed"><div class="pc3-h dm"><div class="pt">Upcoming · 2027 · ECE 3150</div><div class="ptt">VLSI Design Project</div></div><div class="pc3-b"><div class="tr" style="margin-bottom:.95rem"><span class="tag">CMOS Design</span><span class="tag">Cadence Virtuoso</span><span class="tag">Place &amp; Route</span></div><ul><li>This section will be updated when I begin ECE 3150: VLSI and Advanced Digital Design, where students complete chip design projects in Cadence Virtuoso.</li><li>Expected to include CMOS logic design, layout, simulation, and verification as part of the CHEA thread.</li></ul></div></div>
-</div>
+
+  <!-- ══════════════════════════════════════
+       FEATURED: GT-8 CALCULATOR
+  ══════════════════════════════════════ -->
+  <div class="proj-divider">
+    <div class="proj-divider-line"></div>
+    <div class="proj-divider-text">Individual Project</div>
+    <div class="proj-divider-line"></div>
+  </div>
+
+  <div class="proj-feat">
+    <div class="proj-feat-h">
+      <div class="proj-badge">Individual · Spring 2026 · In Progress</div>
+      <h2>GT-8 Calculator — 8-bit ALU on FPGA</h2>
+      <div class="sub">Gate-level digital design and hardware verification in Verilog</div>
+      <div class="tag-row">
+        <span class="tag">Verilog HDL</span><span class="tag">ModelSim</span>
+        <span class="tag">Quartus Prime</span><span class="tag">DE10-Lite FPGA</span>
+      </div>
+    </div>
+    <div class="proj-feat-b">
+      <p>The GT-8 Calculator is an 8-bit arithmetic logic unit designed entirely in Verilog HDL on an Intel DE10-Lite FPGA. Rather than using behavioral shortcuts, the entire design was built from the gate level up — starting with individual logic gates and progressing through a full ripple carry adder to a complete ALU supporting six operations. This project was my first serious exercise in the kind of bottom-up hardware design thinking that VLSI work requires.</p>
+      <p>A key part of the project was writing a comprehensive self-checking testbench in ModelSim to validate correctness across all operations and edge cases, including signed overflow, maximum-value carry propagation, and two's complement subtraction.</p>
+
+      <!-- Image gallery: 2 equal slots on top, 1 wide on bottom -->
+      <div class="img-gallery">
+        <div class="img-slot">
+          <!-- Replace with: <img src="gt8-schematic.jpg" alt="ALU schematic diagram"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">ALU schematic / block diagram</span>
+        </div>
+        <div class="img-slot">
+          <!-- Replace with: <img src="gt8-simulation.jpg" alt="ModelSim simulation waveforms"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">ModelSim waveform output</span>
+        </div>
+        <div class="img-slot img-slot-wide">
+          <!-- Replace with: <img src="gt8-fpga.jpg" alt="FPGA board running the ALU"/> -->
+          <span class="img-slot-icon">🖼</span>
+          <span class="img-slot-label">DE10-Lite FPGA running the design</span>
+        </div>
+      </div>
+      <p class="img-caption">To add images: replace each placeholder comment with an &lt;img&gt; tag pointing to your photo or screenshot file</p>
+
+      <div class="two-col">
+        <div>
+          <div class="col-label">Design Details</div>
+          <ul class="bl">
+            <li>8-bit ALU supporting ADD, SUB, AND, OR, XOR, and NOT with full carry, overflow, and zero flag outputs.</li>
+            <li>Built from gate level up through a complete ripple carry adder — no behavioral Verilog shortcuts.</li>
+            <li>Synthesized and deployed on the Intel DE10-Lite FPGA using Quartus Prime.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">Verification</div>
+          <ul class="bl">
+            <li>Self-checking ModelSim testbench with automated pass/fail reporting across all six operations.</li>
+            <li>Validated signed overflow, maximum-value carry propagation, and two's complement subtraction edge cases.</li>
+            <li>Achieved full functional verification before synthesis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div></div>
-<footer class="ft"><p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p><span>GT · Class of 2029</span></footer>
+
+<footer class="ft">
+  <p>© 2026 Nicholas M. Choi · ECE 1100 ePortfolio · Georgia Institute of Technology</p>
+  <span>GT · Class of 2029</span>
+</footer>
 <script>const t=document.getElementById('nt'),l=document.getElementById('nl');if(t)t.addEventListener('click',()=>l.classList.toggle('open'));</script>
 </body>
 </html>
